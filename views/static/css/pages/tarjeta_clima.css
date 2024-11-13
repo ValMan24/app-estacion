@@ -1,0 +1,39 @@
+
+    #cardConteiner{
+display: flex;
+justify-content: center;
+color:  rgba(0, 0, 0, 1.0);
+flex-wrap: wrap;
+gap: 1rem;
+    }
+    #plantilla{
+        display: flex;
+        
+        gap: 1rem;
+        border-radius: 10px;
+    
+        }
+        .tarjeta{
+            background-color: lightblue;
+            transition: all 0.1seg;
+
+        background-image: url(https://static.vecteezy.com/system/resources/previews/024/231/528/non_2x/cartoon-color-climate-change-landscape-scene-concept-vector.jpg);
+        background-size: cover;
+        }
+        .tarjeta:hover{
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+#cardCima{
+    .tarjeta>div {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
+    background-color: rgba(211, 211, 211, 0.2);
+}
+}

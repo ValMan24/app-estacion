@@ -1,0 +1,48 @@
+@extern('header')
+
+
+<header>
+	<div class="logo">
+		<a href="{{APP_URL_BASE}}/landing"><img src="{{APP_URL_LOGO_MAIN}}" alt=""></a>
+	</div>
+	<div class="icono">
+		A P P - E S T A C I O N 
+	</div>
+	<button class="menu" onclick="sideNav()">
+		<i class="letra-blanca fa-solid fa-bars precio"></i>
+	</button>
+	<div class="enlaces" id="enlacesHead">
+		<button><a href="{{APP_URL_BASE}}/panel" class="letra-blanca"><i class="p12R fa-solid fa-right-to-bracket"></i>Panel</a> </button>
+</div>
+</header>
+
+<main class="main-landing">
+	<section class="container_slider m12b">
+		<div id="slider">
+			<ul>
+				<li>
+					<div class="contenedor">
+
+						<img class="fondo" src="views/static/img/system/principal.jpg" alt="">
+						<div class="txt-imagen titulo_importante font-400">
+							<div class="frase">
+								<h2>Conoce el clima hoy para un mejor mañana. Descubre App-Estación.</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<div class="landing m12t letra-negra">
+
+		<span class="font-25 font-400">Bienvenido a App-Estación: Datos Meteorológicos en Tiempo Real</span>
+		<p class="text font-17 font-400 p12L">
+		Con App-Estación, accede a datos precisos y en tiempo real de las condiciones climáticas en Córdoba y Buenos Aires. Nuestra plataforma recolecta y analiza información de estaciones meteorológicas locales, proporcionando gráficos y reportes intuitivos que facilitan la toma de decisiones para individuos, empresas y comunidades. Desde alertas de clima hasta tendencias detalladas, App-Estación convierte los datos en herramientas prácticas para planificar y adaptarse a un entorno en constante cambio.
+
+	</div>
+</main>
+
+<script src="{{APP_URL_BASE}}/views/static/js/frontend/acciones.js"></script>
+
+@extern('footer')

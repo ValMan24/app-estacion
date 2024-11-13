@@ -1,0 +1,46 @@
+
+
+display: flex;
+padding-bottom: 15px;
+flex-direction: column;
+
+.info-contenedor {
+    flex: 0 0 calc(90%/6 - 15px - 0.5em);
+    border-radius: 15px 15px 10px 10px;
+    cursor: pointer;
+    background-color: rgb(207, 204, 204);
+    box-shadow: 5px 5px 5px -5px var(--gris-claro);
+
+    .btn_registro {
+        width: 70%;
+        background-color: var(--violeta-oscuro);
+        color: white;
+        border-radius: 1px;
+    }
+
+    .stock {
+        font-weight: 700;
+        color: rgb(62, 145, 62);
+        padding-left: 5px;
+    }
+
+    .contenedor_produ {
+        .imagen_produ {
+            position: relative;
+            width: 100%;
+            border-radius: 15px 15px 5px 5px;
+        }
+    }
+}
+
+.icon-absolute-abajo {
+    color: var(--naranja);
+    display: flex;
+    position: relative;
+    padding-left: 15px;
+    width: 100%;
+
+    .precio {
+        padding: 2px;
+    }
+}

@@ -1,0 +1,45 @@
+@extern('header')
+    
+    @extern('navbar')
+
+
+    <main class="main-panel-Admin">
+
+       <div id="cardConteiner"></div>
+<template id="plantilla">
+     <a href="https://mattprofe.com.ar/alumno/6905/app-estacion/panel/details?Z=${dato.chipid}" class="tarjeta">
+                            
+                                 <div class="productos-contenido p10">
+                                     <div class="letra-negra">
+                                         <span class="letra-negra font-apodo">
+                                         
+                                     </span>
+                                     </div> 
+                            
+                             <div class="contenedor_info" >
+                                 <div class="title-name p10">
+                                     <span class="letra-negra font-ubicacion">
+                                       
+                                     </span>
+                                 </div>
+                            
+                                     <div class="flex-end columna">
+                                         <div class="letra-negra flex-end font-12 m12t">
+                                           
+                                           visitas:   
+
+                                      
+                                         </div>
+                                
+                                     </div>
+                                 </div>
+                             </div>
+                         </a>
+         
+</template>
+
+    </main>
+
+     <script src="{{APP_URL_BASE}}/views/static/js/backend/mostrarEstaciones.js"></script> 
+
+@extern('footer')

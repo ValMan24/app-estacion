@@ -1,0 +1,38 @@
+
+	.contenedor{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	.frase {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		padding: 40px;
+		border-radius: 15px;
+		background-color: rgba(0, 0, 0, 0.4); 
+		color: white;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px); 
+	}
+
+	.frase h2 {
+		flex-wrap: wrap;
+		margin: 0;
+		font-size: 24px;
+	}
+
+	img.fondo{
+		max-width: 100%;
+		height: auto;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.txt-imagen.titulo_importante.font-400 {
+    	position: absolute;
+	}
