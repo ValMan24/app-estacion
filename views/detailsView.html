@@ -2,13 +2,17 @@
 @extern('navbar')
 
 
-	
-<main>
-	
+<main class="cuerpo">
+<div class="total">
+	<div class="estacion"></div>
+	<div class="extra"></div>
+</div>
+	<div class="dataEstation">
       <div id="cardClima"></div>
 <template id="plantilla">
   <div class="tarjeta">
-	                        
+ 
+ 
                <div class="productos-contenido p10">
                          <div class="letra-negra">
                                <span class="letra-negra font-apodo">
@@ -27,13 +31,64 @@
                     </div>
                 </div>
     </div> 
-         
+        
+
+
 </template>
+<div id="periodo" class="caja-valor">
+						
+					</div>
+	<!-- Contenedor del monitor instantaneo -->
+	<!-- 	<div id="monitor">
+			
+			<div id="monitor-container">
+				
+				<div class="caja">
+					<div class="caja-title">
+						PERIODO
+					</div>
+					
+				</div>
 
+				<div class="caja">
+				
+					<div class="caja-title">
+						OFICIAL
+					</div>
+					<div id="oficial" class="caja-valor">
+						
+					</div>
+				
+				</div>
+				
+				<div class="caja">
+				
+					<div class="caja-title">
+						BLUE
+					</div>
+					<div id="blue" class="caja-valor">
+						
+					</div>
+				
+				</div>
 
+			</div>
+		</div> -->
 
+		<!-- Contenedor del gráfico -->
+		<div id="grafico-container">
+			<canvas id="grafico-dolar"  width="600" height="400" ></canvas>
+		</div>
+    <div class="botonera"><button class="btn" id="boton1" value="temperatura" onclick="createGraphic(this)">Temperatura</button>
+  <button class="btn" id="boton2" value="presion" onclick="createGraphic(this)">Presión</button>
+  <button class="btn" id="boton3" value="humedad" onclick="createGraphic(this)">Humedad</button>
+  <button class="btn" id="boton4" value="fwi" onclick="createGraphic(this)">Probabilidad de incendio</button>
+   <button class="btn" id="boton5" value="viento" onclick="createGraphic(this)">Viento</button>
+</div>
+</div>
 </main>
+
 <script src="views/static/js/backend/detalle.js"></script>
- <a class="btn-panel" href="panel">Volver al Panel</a>
+
 
 @extern('footer')
