@@ -1,0 +1,24 @@
+@extern('header')
+@extern('navbar')
+<!-- {{APP_URL_LOGO_MAIN}} -->
+<main class="main-login">
+	<form id="reset" method="POST">
+     <div class="fila">
+                        <h5 class="txt">Cree su contraseña</h5>
+                        <i class="fa-regular fa-lock left-icon"></i>
+                        <i class="fa-light fa-eye pa r0" id="togglePassword"> </i>
+                        <input class="linea_registro" type="password" name="txt_pass1" placeholder="Ingrese su Contraseña" id="id_password" required>
+                    </div>
+                    <div class="fila">
+                        <h5 class="txt">Repita su contraseña</h5>
+                        <i class="fa-regular fa-lock left-icon"></i>
+                        <i class="fa-light fa-eye pa r0" id="togglePassword2"> </i>
+                        <input class="linea_registro" type="password" name="txt_pass2" placeholder="Ingrese su Contraseña" id="id_password2" required>
+                    </div>
+</form>
+
+
+</main>
+    <script src="{{APP_URL_BASE}}/views/static/js/backend/reset.js"></script>
+@extern('footer')
+

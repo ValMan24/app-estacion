@@ -11,12 +11,32 @@
     list-style: none;
 }
 
+img.imagen {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+}
+/*header {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}*/
+.logueado {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    flex-direction: row-reverse;
+}
+
+
 
 :root {
 
     --background-main: rgba(143, 157, 231, 0.164);
-    --background-login: rgba(20, 29, 82, 0.9);
-    --background-form: rgba(211, 211, 211, 0.2);
+    --background-login: rgb(237 239 251);//modificado
+    --background-form: #8cc8e1;//modificado
     --background-header: rgba(20, 29, 82, 0.7);
     --background-sidenav: rgb(91, 97, 134); 
     --background-nav: rgba(20, 29, 82,0.8);
@@ -41,6 +61,10 @@
     --celeste: #64c1ec;
     --btn-verde: #1cac49;
     --btn-rojo: #f32e2e;
+}
+
+.d-none {
+    display: none!important;
 }
 
 .hover_logout:hover{
@@ -253,11 +277,7 @@ header {
         align-items: center;
     }
 
-    .logo {
-        display: flex;
-        width: 10%;
-        height: 80px;
-    }
+   */ /*
 
     nav {
         display: flex;
@@ -300,7 +320,7 @@ header {
 
 header {
     width: 100%;
-    height: 85px ;
+    height: 95px ;
 /*    background-color: var(--background-header);*/
     background-color: #8cc8e1;
     border-bottom: 1px solid var(--background-300);
@@ -342,9 +362,9 @@ header {
 .logo img{
     border-radius: 50%;
 }
-button.menu{
+/*button.menu{
     display: none;
-}
+}*/
 
 header .enlaces {
     display: flex;
@@ -352,9 +372,9 @@ header .enlaces {
     padding: .25em;
 }
 
-.ocultar {
+/*.ocultar {
     display: none!important;
-}
+}*/
 #sidenav {
     position: fixed;
    /* height: calc(100vh - 150px);*/
@@ -413,7 +433,6 @@ main {
 
     background: var(--background-main);
 
-    padding: 2em 1em;
 }
 
 footer {
@@ -547,16 +566,16 @@ footer {
 
 }
 
-img {
+/*img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
-
-#menuIcon {
+*/
+/*#menuIcon {
     display: none;
 }
-
+*/
 
 /* INPUTS Y BOTONES */
 
@@ -668,7 +687,9 @@ img {
 .main-login {
     height: 100vh;
     width: 100%;
-    background: var(--background-login);
+    background: url(https://mattprofe.com.ar/alumno/6905/app-estacion/views/static/img/system/login-register.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     .logo {
@@ -3274,15 +3295,13 @@ form.form-tarjetas,
 /* Tablets pequeñas y celulares grandes (hasta 768px) */
 @media (max-width: 768px) {
     header {
-        #enlacesHead{
-            display: none;
-        }
+      
         .menu{
             display: block;
         }
-/*        .cajita-header {
+        .cajita-header {
             height: 55px;
-        }*/
+        }
 
         .logo {
             width: 20%;
@@ -4344,9 +4363,9 @@ form.form-tarjetas,
     }
 
     header {
-        .logo{
+  /*      .logo{
             display: none;
-        }
+        }*/
         .icono {
             width: 100%;
             align-items: flex-end;

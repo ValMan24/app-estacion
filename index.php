@@ -39,39 +39,39 @@
 	//=== firewall
 
 	// // Listas de acceso dependiendo del estado del usuario
-	// $controlador_login = ["logout", "perfil", "abandonar", "chartList", "details","panel","graficos","myProducts","detalleCompra"];
-	// $controlador_anonimo = ["landing", "login", "register","panel","graficos","myProducts"];
+	 $controlador_login = ["details"];//si esta en el vector puede entrar
+	 $controlador_anonimo = ["login","register","validate","blocked","recovery","reset"];
 
-	// // sesion iniciada
-	// if(isset($_SESSION['innovplast'])){
+	// sesion iniciada
+	if(isset($_SESSION['app-estacion'])){
 
-	// 	$controlador_default = "productList";
-	// 	if ($_SESSION['innovplast']['user']->is_admin) {
-	// 		$controlador_anonimo = ["landing", "login", "register" ];
-	// 		$controlador_default = "panel";
-	// 	}
+		// $controlador_default = "productList";
+		// if ($_SESSION['app-estacion']['user']->is_admin) {
+		// 	$controlador_anonimo = ["landing", "login", "register" ];
+		// 	$controlador_default = "panel";
+		// }
 
-	// 	// recorre la lista de secciones no permitidas
-	// 	foreach ($controlador_anonimo as $key => $value) {
-	// 		// si esta solicitando una sección no permitida
-	// 		if($controlador==$value){
-	// 			$controlador = $controlador_default;
-	// 			break;
-	// 		}
-	// 	}
+		// recorre la lista de secciones no permitidas
+		foreach ($controlador_anonimo as $key => $value) {
+			// si esta solicitando una sección no permitida
+			if($controlador==$value){
+				$controlador = "panel";
+				break;
+			}
+		}
 
-	// }else{ // sesión no iniciada
+	}else{ // sesión no iniciada
 
-	// 		// recorre la lista de secciones no permitidas
-	// 		foreach ($controlador_login as $key => $value) {
-	// 		// si esta solicitando una sección no permitida
-	// 		if($controlador==$value){
-	// 			$controlador = "productList";
-	// 			break;
-	// 		}
-	// 	}
+			// recorre la lista de secciones no permitidas
+			foreach ($controlador_login as $key => $value) {
+			// si esta solicitando una sección no permitida
+			if($controlador==$value){
+				$controlador = "login";
+				break;
+			}
+		}
 
-	// }
+	}
 
 	// === fin firewall
 

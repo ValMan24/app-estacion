@@ -1,35 +1,28 @@
+   <header>
 
-    <div id="sidenav">
-        <div class="enlaces columna" id="enlacesNav">
-            <button><a href="{{APP_URL_BASE}}/panel" class="letra-blanca"><i class="p5R fa-solid fa-shop"></i></i>Estaciones</a> </button>
-            <button><a href="{{APP_URL_BASE}}/perfil" class="letra-blanca"><i class="p5R fa-solid fa-user"></i>{{NOMBRE_USUARIO}}</a> </button>
-            <button><a href="{{APP_URL_BASE}}/chartList" class="letra-blanca"><i class="fa-solid fa-cart-shopping letra-blanca"></i>Carrito</a> </button>
-            <div class="absolute_abajo columna">
-                <div class="flex-end redes m12t m12b">
-                    <!-- <i class="fa-regular fa-envelope p10 border_redes ml-2"></i>
-                    <i class="fa-brands fa-whatsapp p10 border_redes ml-2"></i> -->
-                    <i class="fa-brands fa-instagram p10 border_redes ml-2"></i>
-                    <i class="fa-brands fa-facebook p10 border_redes ml-2"></i>
-                    <i class="fa-brands fa-tiktok p10 border_redes ml-2"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+<!-- <div class="anonimo">
+        
+            <button ><a href="{{APP_URL_BASE}}/panel" class="letra-blanca"><i class="p12R fa-solid fa-shop"></i>Todas las Estaciones</a> </button>
+            <div class="registro_login">
+            <button><a href="{{APP_URL_BASE}}/login" class="letra-blanca"><i class="p12R fa-solid fa-right-to-bracket"></i>Iniciar sesión</a> </button>
+            <button><a href="{{APP_URL_BASE}}/register" class="letra-blanca"><i class="p12R fa-solid fa-user-plus"></i>Registrarse</a> </button>
+          
+
+</div> -->
+<div class="logueado">
+            <button><a href="{{APP_URL_BASE}}/panel" class="letra-blanca"><i class="p5R fa-solid fa-shop"></i></i>Estaciones</a></button>
+            <button><a href="{{APP_URL_BASE}}/logout" class="letra-blanca"><span class="material-symbols-outlined">logout</span>Cerrar Sesion</a> </button>
+      
+           <a href="{{APP_URL_BASE}}/landing"><img class="imagen" src="{{APP_URL_LOGO_MAIN}}"  alt=""></a>
+  </div>      
     
-    <header>
-        <div class="logo">
-           <a href="{{APP_URL_BASE}}/landing"><img src="{{APP_URL_LOGO_MAIN}}" alt=""></a>
-        </div>
-        <div class="icono">
-            <input class="buscador" type="search" placeholder="Buscar producto">
-            <input type="submit" class="material-icons-outlined btn_lupa" value="search">
-        </div>
-        <button class="menu" onclick="sideNav()">
-            <i class="letra-blanca fa-solid fa-bars precio"></i>
-        </button>
+      
+        
+     
         <div class="enlaces" id="enlacesHead">
-            <button  id="popupPerfil"><img class="round-image flex " src="{{AVATAR_USUARIO}}">
-            <p class="p5L">{{NOMBRE_USUARIO}}</p></button>
+        
             <button><a href="{{APP_URL_BASE}}/productList" class="letra-blanca"><i class="p5R fa-solid fa-shop"></i>Productos</a> </button>
 
             <button><a href="{{APP_URL_BASE}}/chartList" class="letra-blanca"><i class="p5R fa-solid fa-cart-shopping letra-blanca"></i></a> </button>

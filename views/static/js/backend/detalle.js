@@ -2,18 +2,14 @@ let grafico = null
 
 // Obtén la URL actual
 const url = new URL(window.location.href);
-// Usa searchParams para obtener el valor del parámetro
-// const token_prod = url.searchParams.get('prod');
 const link = url.searchParams.get('Z')
-// // vectores para almacenar los valores del gráfico
 
+if(link == null){window.location.href = `${APP_URL_BASE}/panel`;} 
 let fecha = []
 let hora ="";
 let hora_minuto ="";
 let aux ="";
 let datos_clima = []
-// console.log(btn.value);
-// Seleccionamos el elemento con el ID "grafico-dolar"
 
 const graficoDolar = document.getElementById('grafico-dolar');
 
@@ -39,8 +35,6 @@ async function infoEstacion(link){
     estaciones.forEach(estacion =>{ 
         if(estacion.chipid == link){
             const card = template.content.cloneNode(true);
-// localStorage.setItem('estacion',estacion.apodo)
-// localStorage.setItem('lugar',estacion.ubicacion)
             card.querySelector('.font-apodo').textContent = estacion.apodo;
             card.querySelector('.font-ubicacion').textContent = estacion.ubicacion;
 
@@ -185,11 +179,7 @@ let extra = document.querySelector('.extra');
 
  datos_clima.pop()
  localStorage.setItem("datos",datos_clima)
-    // for (var i = 0; i < datos_clima.length; i++) {
-    //     datos_clima[i] = `${datos_clima[i]}${unidad}`
-    // }
-    // console.log(datos_clima)
-
+  
     // Valores que se grafican
  const valores = {
     labels: fecha,
@@ -262,17 +252,4 @@ function pintaMonitor(valores){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
+  

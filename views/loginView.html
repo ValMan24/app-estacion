@@ -1,0 +1,46 @@
+@extern('header')
+@extern('navbar')
+
+
+
+<!-- {{APP_URL_LOGO_MAIN}} -->
+
+<div class="load_ventana" id="logo_carga">
+    <div class="load_cantenedor">
+        <div class="loader"></div>
+        <div class="load_texto">Mensaje de carga...</div>
+    </div>
+</div>
+
+<main class="total-login">
+<div class="hiden main-login">
+        <div class="contenedor-login">
+            <div class="login">
+                <form action="">
+                    <h4 class="p10">INICIAR SESIÓN</h4>
+                    <h5 class="sub-title">Completa para continuar.</h5>
+                    <div class="fila">
+                        <h5 class="txt">Email</h5>
+                        <i class="fa-regular fa-envelope left-icon"></i>
+                        <input class="linea_registro" type="text" placeholder="Hello@reallygreatsite.com" id="txt_email" required>
+
+                    </div>
+                    <div class="fila">
+                        <h5 class="txt">Contraseña</h5>
+                        <i class="fa-regular fa-lock left-icon"></i>
+                        <i class="fa-light fa-eye pa r0" id="togglePassword"> </i>
+                        <input class="linea_registro" type="password" placeholder="Ingrese su Contraseña " id="txt_pass" required>
+                    </div>
+                    <span id="msg_box"></span>
+                    <input type="submit" value="Acceder" class="btn_registro" id="btn_login">
+                    <span class="font-resgistro"><a href="{{APP_URL_BASE}}/recovery" class="font-registro">¿Olvidaste tu contraseña?</a></span><br>
+                    <span class="font-resgistro"><a href="{{APP_URL_BASE}}/register" class="font-registro">No tienes una cuenta? Registrate</a></span>
+                </form>
+            </div>
+        </div>
+  
+    </div>
+</main>
+    <script src="{{APP_URL_BASE}}/views/static/js/frontend/ojito.js"></script>
+    <script src="{{APP_URL_BASE}}/views/static/js/backend/login.js"></script>
+@extern('footer')

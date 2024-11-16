@@ -1,7 +1,7 @@
 <?php 
 
 	// ejecuta el metodo de logout en el objeto User
-	$_SESSION['innovplast']['user']->leaveOut();
+	$_SESSION['app-estacion']['user']->leaveOut();
 
 	// Borra las variables de sesión
 	session_unset();
@@ -10,5 +10,5 @@
 	session_destroy();
 
 	// Redirecciona a landing
-	header("Location: landing");
+	header("Location: login");
  ?>
