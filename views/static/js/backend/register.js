@@ -1,11 +1,11 @@
 
-
+ logo_carga.classList.add("d-none")
 
 //realiza una accion cuando se realiza un evento del tipo submit dentro del formulario
  //(se apreta el boton de tipo submit)
 form_register.addEventListener('submit', (e) =>{
 	//evita que se recargue la pagina cuando apreto el boton del formulario
-
+logo_carga.classList.remove("d-none")	
 	//Elimina una clase al elemento window_chage
 	window_charge.classList.remove("d-none")
 
@@ -46,6 +46,8 @@ form_register.addEventListener('submit', (e) =>{
 			//display:none
 			if(data.list.errno == 200){
 				console.log("se envio el email correctamente")
+				window.location.href = `${APP_URL_BASE}/panel`;
 			}
+			logo_carga.classList.add("d-none")
 		})
 })

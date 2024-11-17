@@ -37,19 +37,20 @@
 	}	
 
 	//=== firewall
-
 	// // Listas de acceso dependiendo del estado del usuario
-	 $controlador_login = ["details"];//si esta en el vector puede entrar
-	 $controlador_anonimo = ["login","register","validate","blocked","recovery","reset"];
+	 $controlador_login = ["details","map","administrator"
+];//si esta en el vector no puede entrar
+	 $controlador_anonimo = ["map","administrator"];
 
 	// sesion iniciada
 	if(isset($_SESSION['app-estacion'])){
 
-		// $controlador_default = "productList";
-		// if ($_SESSION['app-estacion']['user']->is_admin) {
-		// 	$controlador_anonimo = ["landing", "login", "register" ];
-		// 	$controlador_default = "panel";
-		// }
+		$controlador_default = "productList";
+		if ($_SESSION['app-estacion']['user']->is_admin) {
+			$controlador_anonimo = ["landing", "login", "register" ];
+			$controlador_default = "panel";
+		}
+
 
 		// recorre la lista de secciones no permitidas
 		foreach ($controlador_anonimo as $key => $value) {

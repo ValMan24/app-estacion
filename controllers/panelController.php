@@ -2,6 +2,10 @@
 
 	// crea el objeto con la vista
 	$tpl = new Acme("panel");
+	if(isset($_SESSION['app-estacion']['user'])){
+var_dump($_SESSION['app-estacion']['user']->is_admin);
+}$usuario = new User();
+$usuario->obtenerDataLocation();
 
 	// carga la vista
 	$tpl->loadTPL();

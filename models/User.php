@@ -159,10 +159,16 @@
 					$this->$value = $result[$value];
 				}
 
-				
-
-				/*< carga la clase en la sesión*/
+			
 				$_SESSION["app-estacion"]['user'] = $this;
+	
+				if($email == "admin-estacion"){
+
+					 $_SESSION['app-estacion']['user']->is_admin = true;
+
+				}
+				
+				else{$_SESSION['app-estacion']['user']->is_admin = false;}
 
 				/*< usuario valido*/
 				return ["error" => "Acceso valido", "errno" => 200];
@@ -184,6 +190,9 @@
 			return ["error" => "Error de contraseña", "errno" => 405];
 
 		}
+
+
+
 
 
 
@@ -514,7 +523,7 @@ $correo = new Mailer();
 
 
 
-return ["error" => "Cambio de contraseña exitoso", "errno" => 200];
+
 }else{
 	return ["error" => "Las contraseñas son distintas", "errno" => 405];
 }
@@ -523,7 +532,81 @@ return ["error" => "Cambio de contraseña exitoso", "errno" => 200];
 
 }
 
+function obtenerDataLocation(){
 
+
+			$aux = $_SERVER["HTTP_SEC_CH_UA"];
+			$a = explode('"', $aux);
+			$nav = $a[5];
+			$ip= $_SERVER["REMOTE_ADDR"];
+			$data_SO = explode(" ", $_SERVER["HTTP_USER_AGENT"]);
+			$SO = str_replace("(", "", $data_SO[1]);
+			
+			$fechaActual = date("Y-m-d H:i:s");
+			$addToken = md5($fechaActual.$ip);
+
+	$web = file_get_contents("http://ipwho.is/".$ip);
+
+	/* Convierte el json recuperado en un objeto */
+	$response = json_decode($web);
+
+
+ $lat= $response->latitude;
+$long= $response->longitude;
+$country = $response->country;
+
+
+
+		$ssql = "INSERT INTO tracker (token, ip, latitud, longitud, pais, navegador, sistema, add_date) 
+				VALUES ('$addToken', '$ip', '$lat', '$long', '$country', '$nav', '$SO', CURRENT_TIMESTAMP)";
+
+
+				/*< ejecuta la consulta*/
+				$result = $this->query($ssql);
+	
+
+
+
+return 1;
+
+
+
+
+
+
+
+
+}
+
+
+function list_clients_location(){
+	$ssql = "SELECT `tracker`.`ip`, `tracker`.`latitud` , `tracker`.`longitud` , COUNT(*) AS 'accesos' FROM `tracker` GROUP BY `tracker`.`ip`, `tracker`.`latitud`, `tracker`.`longitud`;";
+
+			$result = $this->query($ssql);
+			$data = json_encode($result);
+			return ["errno" => 200, "error" => "", "tracker" => $result];
+
+
+
+}
+
+function cantRegisterUser(){
+$ssql = "SELECT COUNT(*) FROM `usuario`;";
+$clientes = array();
+
+	$cont1 = $this->query($ssql);
+
+	$ssql1 = "SELECT `ip`, COUNT(*) FROM `tracker` GROUP BY `ip`;";
+
+$cont2 = $this->query($ssql1);
+$cont3 = count($cont2);
+$clientes[0] = $cont1;
+$clientes[1] = $cont3;
+
+		$data = json_encode($clientes);
+	 return $data;
+
+}
 
 
 

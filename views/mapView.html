@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- {{PROJECT_NAME}} 
+{{ PROJECT_DESCRIPTION}} 
+{{PROJECT_SECTION}} - {{PROJECT_NAME}}{{PROJECT_NAME}}{{PROJECT_DESCRIPTION}}
+	{{PROJECT_AUTHOR}}{{PROJECT_AUTHOR_CONTACT}}{{PROJECT_AUTHOR_CONTACT}}
+{{PROJECT_KEYWORDS}}
+{{PROJECT_URL}}"{{PROJECT_NAME}}{{PROJECT_DESCRIPTION}}
+	{{PROJECT_URL}}{{APP_URL_BASE}}{{APP_URL_BASE}}{{PROJECT_MODE}}{{APP_URL_LOGO_HEAD}}
+	{{APP_URL_BASE}}{{APP_URL_BASE}}{{PROJECT_MODE}}{{APP_URL_BASE}}{{APP_URL_LOGO_MAIN}}-->
+
+<html lang="en">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>app-base leaflet</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<!-- Css y Javascript de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		.leaflet-container {
+			height: 400px;
+			width: 600px;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+	
+	@extern('navbar')
+</head>
+<body>
+@extern('header')
+	<!-- Contenedor para el mapa -->
+	<div id="map" style="width: 100%; height: 100%;"></div>
+	
+
+
+</body>
+    <script src="{{APP_URL_BASE}}/views/static/js/backend/map.js"></script>
+</html>

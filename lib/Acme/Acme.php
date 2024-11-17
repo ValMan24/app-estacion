@@ -92,7 +92,7 @@
 				if($matches[1][$key] == "navbar"){
 					if (isset($_SESSION['app-estacion'])) {
 
-						$matches[1][$key] = isset($_SESSION['app-estacion']['user']->is_admin) ? "navbar_admin" : "navbar_cliente";
+						$matches[1][$key] = $_SESSION['app-estacion']['user']->is_admin ? "navbar_admin" : "navbar_cliente";
 					}else{
 						$matches[1][$key] = "navbar_anonimo"; 
 					}

@@ -3,8 +3,12 @@ let grafico = null
 // Obtén la URL actual
 const url = new URL(window.location.href);
 const link = url.searchParams.get('Z')
+console.log(link)
+if(link == null)
+    {
 
-if(link == null){window.location.href = `${APP_URL_BASE}/panel`;} 
+        window.location.href = `${APP_URL_BASE}/panel`;
+} 
 let fecha = []
 let hora ="";
 let hora_minuto ="";
